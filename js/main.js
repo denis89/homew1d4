@@ -12,10 +12,39 @@ basicCalc.addEventListener("click", function() {
         var num2 = parseFloat(document.getElementById("basic-num-2").value); 
         console.log(num2)
 
-        var sum = num1 + num2;
-        console.log(sum)
-
-        var basicAnswer = document.getElementById("basic-answer");
+  var basicAnswer = document.getElementById("basic-answer");
         console.log(basicAnswer)
      basicAnswer.className = "show";
-     document.getElementById("basic-answer-alert").innerHTML = sum; });
+
+     var answer;
+      if (op === "+"){
+        answer = num1 + num2;
+        console.log(answer);
+ }
+      else if (op === "-"){
+        answer= num1 - num2;
+        console.log(answer);
+      }
+      else if (op === "/"){
+        answer = num1 / num2;
+        console.log(answer);
+      }
+      else {
+        answer = num1 * num2;
+        console.log(answer);
+      }
+        document.getElementById("basic-answer-alert").innerHTML = answer;     
+});
+
+var bmi = document.getElementById('bmi-calc');
+bmi.addEventListener("click", function() {
+        var  mass = parseFloat(document.getElementById("bmi-mass").value);
+        console.log(mass)
+
+        var height = document.getElementById("bmi-height").value;
+        console.log(height)
+
+        var answer = mass/(height*height); 
+        console.log(answer)
+
+});
